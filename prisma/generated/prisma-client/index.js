@@ -40,6 +40,6 @@ var models = [
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `https://interview-q-9082c5e7f5.herokuapp.com/interview-q-be/dev`
+  endpoint: `https://interviewq-server-3a176657f4.herokuapp.com`
 });
 exports.prisma = new exports.Prisma();
