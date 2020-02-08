@@ -1,0 +1,157 @@
+mutation {
+	createIndustry(data: { name: "Agriculture, Food, and Natural Resources" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Architecture and Construction" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Audio/Video Technology" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Business Management and Administration" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Communications" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Customer Service" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Education and Training" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Engineering and Technology" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Finance" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Government and Public Administration" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Healthcare" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Hospitality and Tourism" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Human Resources" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Information Technology" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(
+		data: { name: "Law, Public Safety, Corrections, and Security" }
+	) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Manufacturing" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Marketing" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Sales" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Science and Research" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Social Work and Therapy" }) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(
+		data: { name: "Transportation, Distribution, and Logistics" }
+	) {
+		name
+		id
+	}
+}
+
+mutation {
+	createIndustry(data: { name: "Visual Arts" }) {
+		name
+		id
+	}
+}

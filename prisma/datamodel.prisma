@@ -1,0 +1,100 @@
+type Post {
+  id: ID! @id
+  price: Int
+  position: String
+  industry: Industry
+  description: String
+  coachID: String! @unique
+  createdAt: DateTime! @createdAt
+  lastUpdated: DateTime! @updatedAt
+  company: String
+  isPublished: Boolean! @default(value: true)
+  desc_lc: String
+  company_lc: String
+  position_lc: String
+  tags: [Tag]!
+  # coach: User @provides(fields: "email") @relation(link: TABLE name: "UserOnPost", onDelete: SET_NULL)
+  # ratingsId: ID!
+}
+type Industry {
+	id: ID! @id
+	name: String! @unique
+  posts: [Post]!
+}
+
+type Tag {
+  id: ID! @id
+  name: String! @unique
+  posts: [Post]!
+}
+
+type Availability {
+  id: ID! @id
+  hour: Int!
+  minute: Int!
+  coach: String!
+  bookingID: String
+	year: Int!
+	month: Int!
+	day: Int!
+  uniquecheck: String! @unique
+	isOpen: Boolean!
+	recurring: Boolean!
+}
+
+type Booking {
+  id: ID! @id
+  year: Int!
+  month: Int!
+  day: Int!
+  hour: Int!
+  minute: Int!
+  coach: String!
+  seeker: String!
+  uniquecheck: String! @unique
+  availability: [Availability]!
+	pending: Boolean
+	confirmed: Boolean
+  interviewGoals: String
+  interviewQuestions: String
+  resumeURL: String
+  review: Review @relation(link: INLINE)
+  response: Response @relation(link: INLINE)
+  report: Report @relation(link: INLINE)
+  price: Int!
+  date: DateTime!
+}
+
+type Review {
+  id: ID! @id
+  coach: String!
+  seeker: String!
+  booking: Booking! @unique
+  rating: Int!
+  review: String
+  createdAt: DateTime! @createdAt
+  lastUpdated: DateTime! @updatedAt
+  response: Response @relation(link: INLINE)
+}
+
+type Response {
+  id: ID! @id
+  review: Review! @unique
+  text: String!
+  createdAt: DateTime! @createdAt
+  lastUpdated: DateTime! @updatedAt
+  booking: Booking! @unique
+}
+
+type Report {
+  id: ID! @id
+  coach: String!
+  seeker: String!
+  booking: Booking! @unique
+  strengths: String!
+  growthAreas: String!
+  suggestions: String!
+  additionalComments: String
+  createdAt: DateTime! @createdAt
+  isSent: Boolean
+}

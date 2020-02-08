@@ -1,0 +1,59 @@
+type Query {
+	interviewQinfo: String!
+	posts: [Post]!
+	post(id: String!): Post!
+	industries: [Industry]!
+	
+}
+
+type Mutation {
+	createPost(
+		price: Int!
+		position: String!
+		industryName: String!
+		description: String!
+	): Post!
+
+	deletePost(id: String!): Post!
+
+	updatePost(
+		id: String!
+		price: Int
+		position: String
+		industryName: String
+		description: String
+	): Post!
+}
+
+type Post {
+	id: ID!
+	price: Int!
+	position: String!
+	industry: Industry!
+	description: String!
+	# coachId: ID!
+	# ratingsId: ID!
+	# tags: String!
+}
+
+type Industry {
+	id: ID!
+	name: String!
+	posts: [Post]!
+}
+
+# type Tag{
+# 	id: ID!
+# 	name: String!
+# 	postings: [Posting!]
+# }
+
+	type Availability {
+    id: ID!
+    dayOfWeek: String!
+    hour: Int!
+    minute: Int!
+    end_hour: Int!
+    end_minute: Int!
+    user: User!
+	}

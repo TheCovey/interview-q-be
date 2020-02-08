@@ -1,0 +1,9 @@
+endpoint: https://interview-q-9082c5e7f5.herokuapp.com/interview-q-be/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/
+    
+seed: 
+  import: seed.graphql
